@@ -1,0 +1,46 @@
+.enfold-ticker {
+	overflow: hidden;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.enfold-ticker-track {
+	display: flex;
+	width: max-content;
+}
+
+/*
+ * RTL: text enters from the right, exits left.
+ * Moving -50% shifts the track by exactly one content copy width,
+ * creating a seamless loop with the duplicated span.
+ */
+.enfold-ticker-track--rtl {
+	animation: enfold-ticker-rtl var( --enfold-ticker-duration, 20s ) linear infinite;
+}
+
+@keyframes enfold-ticker-rtl {
+	from { transform: translateX( 0 ); }
+	to   { transform: translateX( -50% ); }
+}
+
+/* LTR: text enters from the left, exits right. */
+.enfold-ticker-track--ltr {
+	animation: enfold-ticker-ltr var( --enfold-ticker-duration, 20s ) linear infinite;
+}
+
+@keyframes enfold-ticker-ltr {
+	from { transform: translateX( -50% ); }
+	to   { transform: translateX( 0 ); }
+}
+
+.enfold-ticker-content {
+	white-space: nowrap;
+	padding-right: 3em;
+}
+
+@media ( prefers-reduced-motion: reduce ) {
+	.enfold-ticker-track--rtl,
+	.enfold-ticker-track--ltr {
+		animation: none;
+	}
+}

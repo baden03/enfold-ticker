@@ -1,0 +1,92 @@
+# Translation template for enfold-ticker.
+# Copyright (C) 2024 Twinpictures
+# This file is distributed under the same license as the enfold-ticker plugin.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: enfold-ticker 0.0.1\n"
+"Report-Msgid-Bugs-To: https://twinpictures.de\n"
+"POT-Creation-Date: 2024-01-01 00:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: includes/class-enfold-ticker-element.php
+msgid "Ticker"
+msgstr ""
+
+#: includes/class-enfold-ticker-element.php
+msgid "Content Elements"
+msgstr ""
+
+#: includes/class-enfold-ticker-element.php
+msgid "Add a scrolling news ticker"
+msgstr ""
+
+#: includes/class-enfold-ticker-element.php
+msgid "Content"
+msgstr ""
+
+#: includes/class-enfold-ticker-element.php
+msgid "Ticker Content"
+msgstr ""
+
+#: includes/class-enfold-ticker-element.php
+msgid "Enter the text to display in the ticker."
+msgstr ""
+
+#: includes/class-enfold-ticker-element.php
+msgid "Your ticker text goes here"
+msgstr ""
+
+#: includes/class-enfold-ticker-element.php
+msgid "Styling"
+msgstr ""
+
+#: includes/class-enfold-ticker-element.php
+msgid "Font Size"
+msgstr ""
+
+#: includes/class-enfold-ticker-element.php
+msgid "Ticker font size, e.g. 16px or 1rem."
+msgstr ""
+
+#: includes/class-enfold-ticker-element.php
+msgid "Scroll Speed"
+msgstr ""
+
+#: includes/class-enfold-ticker-element.php
+msgid "How fast the ticker scrolls."
+msgstr ""
+
+#: includes/class-enfold-ticker-element.php
+msgid "Slow"
+msgstr ""
+
+#: includes/class-enfold-ticker-element.php
+msgid "Medium"
+msgstr ""
+
+#: includes/class-enfold-ticker-element.php
+msgid "Fast"
+msgstr ""
+
+#: includes/class-enfold-ticker-element.php
+msgid "Scroll Direction"
+msgstr ""
+
+#: includes/class-enfold-ticker-element.php
+msgid "Direction the ticker text scrolls."
+msgstr ""
+
+#: includes/class-enfold-ticker-element.php
+msgid "Right to Left (default)"
+msgstr ""
+
+#: includes/class-enfold-ticker-element.php
+msgid "Left to Right"
+msgstr ""

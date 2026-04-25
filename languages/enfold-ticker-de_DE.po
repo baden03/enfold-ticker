@@ -1,0 +1,93 @@
+# German translation for enfold-ticker.
+# Copyright (C) 2024 Twinpictures
+# This file is distributed under the same license as the enfold-ticker plugin.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: enfold-ticker 0.0.1\n"
+"Report-Msgid-Bugs-To: https://twinpictures.de\n"
+"POT-Creation-Date: 2024-01-01 00:00+0000\n"
+"PO-Revision-Date: 2024-01-01 00:00+0000\n"
+"Last-Translator: Twinpictures <info@twinpictures.de>\n"
+"Language-Team: German <de@li.org>\n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: includes/class-enfold-ticker-element.php
+msgid "Ticker"
+msgstr "Ticker"
+
+#: includes/class-enfold-ticker-element.php
+msgid "Content Elements"
+msgstr "Inhaltselemente"
+
+#: includes/class-enfold-ticker-element.php
+msgid "Add a scrolling news ticker"
+msgstr "Scrollenden Newsticker hinzufügen"
+
+#: includes/class-enfold-ticker-element.php
+msgid "Content"
+msgstr "Inhalt"
+
+#: includes/class-enfold-ticker-element.php
+msgid "Ticker Content"
+msgstr "Ticker-Inhalt"
+
+#: includes/class-enfold-ticker-element.php
+msgid "Enter the text to display in the ticker."
+msgstr "Text eingeben, der im Ticker angezeigt wird."
+
+#: includes/class-enfold-ticker-element.php
+msgid "Your ticker text goes here"
+msgstr "Ihr Ticker-Text kommt hier hin"
+
+#: includes/class-enfold-ticker-element.php
+msgid "Styling"
+msgstr "Gestaltung"
+
+#: includes/class-enfold-ticker-element.php
+msgid "Font Size"
+msgstr "Schriftgröße"
+
+#: includes/class-enfold-ticker-element.php
+msgid "Ticker font size, e.g. 16px or 1rem."
+msgstr "Schriftgröße des Tickers, z.B. 16px oder 1rem."
+
+#: includes/class-enfold-ticker-element.php
+msgid "Scroll Speed"
+msgstr "Scroll-Geschwindigkeit"
+
+#: includes/class-enfold-ticker-element.php
+msgid "How fast the ticker scrolls."
+msgstr "Wie schnell der Ticker scrollt."
+
+#: includes/class-enfold-ticker-element.php
+msgid "Slow"
+msgstr "Langsam"
+
+#: includes/class-enfold-ticker-element.php
+msgid "Medium"
+msgstr "Mittel"
+
+#: includes/class-enfold-ticker-element.php
+msgid "Fast"
+msgstr "Schnell"
+
+#: includes/class-enfold-ticker-element.php
+msgid "Scroll Direction"
+msgstr "Scrollrichtung"
+
+#: includes/class-enfold-ticker-element.php
+msgid "Direction the ticker text scrolls."
+msgstr "Richtung, in die der Ticker-Text scrollt."
+
+#: includes/class-enfold-ticker-element.php
+msgid "Right to Left (default)"
+msgstr "Von rechts nach links (Standard)"
+
+#: includes/class-enfold-ticker-element.php
+msgid "Left to Right"
+msgstr "Von links nach rechts"
