@@ -19,7 +19,7 @@ The ticker scrolls text horizontally across the full width of its container in a
 **Features**
 
 * Native ALB element — integrates directly into the Enfold Advanced Layout Builder
-* Configurable content, font size, scroll speed, and scroll direction
+* Configurable content, font size, scroll duration (integer seconds), and scroll direction
 * Seamless horizontal scroll loop (right to left by default, left to right optional)
 * Lightweight CSS animation — no extra JavaScript
 * Respects the `prefers-reduced-motion` accessibility media query
@@ -35,7 +35,7 @@ The ticker scrolls text horizontally across the full width of its container in a
 2. Activate the plugin through **Plugins → Installed Plugins** in the WordPress admin
 3. Open any page or post in the Enfold Layout Builder
 4. Find the **Ticker** element in the ALB element list and drag it into your layout
-5. Configure content, font size, speed, and scroll direction in the element options panel
+5. Configure content, font size, scroll duration, and scroll direction in the element options panel
 6. Save and preview the page
 
 == Frequently Asked Questions ==

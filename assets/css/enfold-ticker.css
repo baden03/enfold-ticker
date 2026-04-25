@@ -1,46 +1,138 @@
-.enfold-ticker {
-	overflow: hidden;
+/**
+ * enfold-ticker — frontend layout and CSS marquee.
+ *
+ * @package enfold-ticker
+ */
+
+/* Outermost wrapper: fill Avia / ALB layout cells and color sections. */
+.enfold-ticker-wrap {
+	display: block;
+	box-sizing: border-box;
 	width: 100%;
+	min-width: 100%;
+	max-width: none;
+	margin: 0;
+	padding: 0;
+	clear: both;
+	/* flex/grid: stretch to the main column, do not shrink like a “content” box */
+	flex: 1 0 auto;
+	flex-basis: 100%;
+	align-self: stretch;
+	--enfold-ticker-duration: 20s;
+}
+
+#top .enfold-ticker-wrap,
+.avia-color-section .enfold-ticker-wrap,
+.avia-section .enfold-ticker-wrap,
+.avia-content .enfold-ticker-wrap,
+.avia-content-wrap .enfold-ticker-wrap,
+.entry-content .enfold-ticker-wrap {
+	width: 100%;
+	min-width: 100%;
+	max-width: none;
+}
+
+/*
+ * Enfold page layout: `main` / `.entry-content-wrapper` are often flex or grid; children can
+ * shrink unless we take the full line and reset max-width from theme or `.content`.
+ */
+#top .entry-content-wrapper > .enfold-ticker-wrap,
+#top .entry-content .enfold-ticker-wrap,
+#top .post-entry .enfold-ticker-wrap,
+#top main.template-page .enfold-ticker-wrap,
+#top .entry-content-wrapper .enfold-ticker-wrap {
+	width: 100%;
+	min-width: 100%;
+	max-width: none;
+	margin-left: 0;
+	margin-right: 0;
+	float: none;
+	/* If the parent is CSS grid, span all columns. */
+	grid-column: 1 / -1;
+	justify-self: stretch;
+}
+
+.enfold-ticker {
+	/* So each “segment” can be min-width: 100cqi (one viewport width of this bar). */
+	container-type: inline-size;
+	container-name: enfold-ticker;
+	box-sizing: border-box;
+	width: 100%;
+	min-width: 100%;
+	max-width: none;
+	margin: 0;
+	overflow: hidden;
+}
+
+.enfold-ticker * {
 	box-sizing: border-box;
 }
 
 .enfold-ticker-track {
 	display: flex;
+	flex-wrap: nowrap;
 	width: max-content;
+	will-change: transform;
+	animation-name: enfold-ticker-scroll;
+	animation-duration: var(--enfold-ticker-duration, 20s);
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	/* No gap: loop length must be exactly 2× one segment, so -50% lines up. */
+	gap: 0;
 }
 
 /*
- * RTL: text enters from the right, exits left.
- * Moving -50% shifts the track by exactly one content copy width,
- * creating a seamless loop with the duplicated span.
+ * One segment per copy; at least the full width of the ticker. Short text then gets empty
+ * space inside the first segment while the second segment scrolls in from the opposite edge,
+ * instead of a tiny track that “jumps” when the two copies sit side by side.
  */
+.enfold-ticker-seg {
+	display: flex;
+	flex: 0 0 auto;
+	flex-shrink: 0;
+	align-items: center;
+	justify-content: flex-start;
+	white-space: nowrap;
+	/* Fallback when container query units are unavailable (worse for very short text). */
+	min-width: 100%;
+	padding-inline: 0.25em;
+}
+
+@supports (width: 1cqi) {
+	.enfold-ticker-seg {
+		/* One full “view” of the bar per copy, so the duplicate enters as the first leaves. */
+		min-width: 100cqi;
+	}
+}
+
+/* Right to left: default news-style scroll. */
 .enfold-ticker-track--rtl {
-	animation: enfold-ticker-rtl var( --enfold-ticker-duration, 20s ) linear infinite;
+	animation-direction: normal;
 }
 
-@keyframes enfold-ticker-rtl {
-	from { transform: translateX( 0 ); }
-	to   { transform: translateX( -50% ); }
-}
-
-/* LTR: text enters from the left, exits right. */
+/* Left to right: reverse the loop. */
 .enfold-ticker-track--ltr {
-	animation: enfold-ticker-ltr var( --enfold-ticker-duration, 20s ) linear infinite;
-}
-
-@keyframes enfold-ticker-ltr {
-	from { transform: translateX( -50% ); }
-	to   { transform: translateX( 0 ); }
+	animation-direction: reverse;
 }
 
 .enfold-ticker-content {
+	display: block;
 	white-space: nowrap;
-	padding-right: 3em;
 }
 
-@media ( prefers-reduced-motion: reduce ) {
-	.enfold-ticker-track--rtl,
-	.enfold-ticker-track--ltr {
+@keyframes enfold-ticker-scroll {
+	from {
+		transform: translate3d(0, 0, 0);
+	}
+
+	to {
+		transform: translate3d(-50%, 0, 0);
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.enfold-ticker-track {
 		animation: none;
+		transform: none;
 	}
 }

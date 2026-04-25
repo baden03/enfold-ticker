@@ -1,93 +1,79 @@
-# German translation for enfold-ticker.
-# Copyright (C) 2024 Twinpictures
-# This file is distributed under the same license as the enfold-ticker plugin.
-#
+# Copyright (C) 2026 Twinpictures
+# This file is distributed under the GPL-2.0.
 msgid ""
 msgstr ""
 "Project-Id-Version: enfold-ticker 0.0.1\n"
 "Report-Msgid-Bugs-To: https://twinpictures.de\n"
-"POT-Creation-Date: 2024-01-01 00:00+0000\n"
-"PO-Revision-Date: 2024-01-01 00:00+0000\n"
-"Last-Translator: Twinpictures <info@twinpictures.de>\n"
-"Language-Team: German <de@li.org>\n"
+"POT-Creation-Date: 2026-04-25 12:00+0000\n"
+"PO-Revision-Date: 2026-04-25 12:00+0000\n"
+"Last-Translator: Twinpictures <https://twinpictures.de>\n"
+"Language-Team: German\n"
 "Language: de_DE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: includes/class-enfold-ticker-element.php
+#: enfold-ticker.php
+msgid "enfold-ticker requires the Enfold theme to be installed and active. The Ticker element will not appear in the layout builder without it."
+msgstr "enfold-ticker setzt voraus, dass das Enfold-Theme installiert und aktiv ist. Ohne es erscheint das Ticker-Element nicht im Layout-Builder."
+
+#: shortcodes/avia-ticker.php
 msgid "Ticker"
 msgstr "Ticker"
 
-#: includes/class-enfold-ticker-element.php
-msgid "Content Elements"
-msgstr "Inhaltselemente"
-
-#: includes/class-enfold-ticker-element.php
+#: shortcodes/avia-ticker.php
 msgid "Add a scrolling news ticker"
-msgstr "Scrollenden Newsticker hinzufügen"
+msgstr "Einen laufenden News-Ticker hinzufügen"
 
-#: includes/class-enfold-ticker-element.php
+#: shortcodes/avia-ticker.php
 msgid "Content"
 msgstr "Inhalt"
 
-#: includes/class-enfold-ticker-element.php
+#: shortcodes/avia-ticker.php
 msgid "Ticker Content"
-msgstr "Ticker-Inhalt"
+msgstr "Ticker-Text"
 
-#: includes/class-enfold-ticker-element.php
+#: shortcodes/avia-ticker.php
 msgid "Enter the text to display in the ticker."
-msgstr "Text eingeben, der im Ticker angezeigt wird."
+msgstr "Geben Sie den Text ein, der im Ticker angezeigt werden soll."
 
-#: includes/class-enfold-ticker-element.php
+#: shortcodes/avia-ticker.php
 msgid "Your ticker text goes here"
-msgstr "Ihr Ticker-Text kommt hier hin"
+msgstr "Hier steht Ihr Ticker-Text"
 
-#: includes/class-enfold-ticker-element.php
+#: shortcodes/avia-ticker.php
 msgid "Styling"
-msgstr "Gestaltung"
+msgstr "Darstellung"
 
-#: includes/class-enfold-ticker-element.php
+#: shortcodes/avia-ticker.php
 msgid "Font Size"
 msgstr "Schriftgröße"
 
-#: includes/class-enfold-ticker-element.php
+#: shortcodes/avia-ticker.php
 msgid "Ticker font size, e.g. 16px or 1rem."
-msgstr "Schriftgröße des Tickers, z.B. 16px oder 1rem."
+msgstr "Schriftgröße des Tickers, z. B. 16px oder 1rem."
 
-#: includes/class-enfold-ticker-element.php
-msgid "Scroll Speed"
-msgstr "Scroll-Geschwindigkeit"
+#: shortcodes/avia-ticker.php
+msgid "Scroll duration"
+msgstr "Scroll-Dauer"
 
-#: includes/class-enfold-ticker-element.php
-msgid "How fast the ticker scrolls."
-msgstr "Wie schnell der Ticker scrollt."
+#: shortcodes/avia-ticker.php
+msgid "Duration in seconds for one full loop (5-300). Lower is faster, higher is slower."
+msgstr "Dauer in Sekunden für einen kompletten Durchlauf (5–300). Niedriger schneller, höher langsamer."
 
-#: includes/class-enfold-ticker-element.php
-msgid "Slow"
-msgstr "Langsam"
-
-#: includes/class-enfold-ticker-element.php
-msgid "Medium"
-msgstr "Mittel"
-
-#: includes/class-enfold-ticker-element.php
-msgid "Fast"
-msgstr "Schnell"
-
-#: includes/class-enfold-ticker-element.php
+#: shortcodes/avia-ticker.php
 msgid "Scroll Direction"
-msgstr "Scrollrichtung"
+msgstr "Scroll-Richtung"
 
-#: includes/class-enfold-ticker-element.php
+#: shortcodes/avia-ticker.php
 msgid "Direction the ticker text scrolls."
-msgstr "Richtung, in die der Ticker-Text scrollt."
+msgstr "Richtung, in der der Ticker-Text scrollt."
 
-#: includes/class-enfold-ticker-element.php
+#: shortcodes/avia-ticker.php
 msgid "Right to Left (default)"
-msgstr "Von rechts nach links (Standard)"
+msgstr "Rechts nach links (Standard)"
 
-#: includes/class-enfold-ticker-element.php
+#: shortcodes/avia-ticker.php
 msgid "Left to Right"
-msgstr "Von links nach rechts"
+msgstr "Links nach rechts"

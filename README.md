@@ -9,8 +9,8 @@ enfold-ticker extends the Enfold ALB with a custom Ticker component. Once instal
 ## Features
 
 - Native ALB element — integrates directly into the Enfold Advanced Layout Builder
-- Seamless horizontal scroll loop (left to right, full container width)
-- Configurable **content**, **font size**, and **scroll speed**
+- Seamless horizontal scroll loop (right-to-left by default; direction is configurable, full container width)
+- Configurable **content**, **font size**, and **scroll duration** (seconds, integer)
 - Lightweight CSS-based animation
 - Translation-ready — ships with English and German (de_DE)
 
@@ -26,7 +26,7 @@ enfold-ticker extends the Enfold ALB with a custom Ticker component. Once instal
 2. Activate the plugin through **Plugins → Installed Plugins** in the WordPress admin
 3. Open any page or post in the Enfold Layout Builder
 4. Find the **Ticker** element in the ALB element list and drag it into your layout
-5. Configure content, font size, and speed in the element options panel
+5. Configure content, font size, and scroll duration in the element options panel
 6. Save and preview the page
 
 ## ALB Element Options
@@ -35,7 +35,7 @@ enfold-ticker extends the Enfold ALB with a custom Ticker component. Once instal
 |---|---|
 | Content | The text displayed in the scrolling ticker |
 | Font Size | Size of the ticker text |
-| Speed | How fast the ticker scrolls (slow / medium / fast) |
+| Scroll duration | Seconds for one full loop, 5-300 (lower = faster) |
 | Scroll Direction | Direction of scroll — Right to Left (default) or Left to Right |
 
 ## Translations

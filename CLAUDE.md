@@ -21,7 +21,7 @@
 ### ALB Component Options
 - **Content** — the ticker text displayed to visitors
 - **Font Size** — controls the text size of the ticker
-- **Speed** — controls how fast the ticker scrolls
+- **Scroll duration** — integer (seconds, 5–300) for one full loop; lower = faster
 - **Scroll Direction** — `rtl` (default) or `ltr`
 
 ### Ticker Behavior
@@ -47,9 +47,9 @@
 
 ```
 enfold-ticker/
-├── enfold-ticker.php          # Main plugin file, plugin header, bootstrap
-├── includes/
-│   └── class-enfold-ticker-element.php  # ALB element registration
+├── enfold-ticker.php          # Main plugin file, plugin header, bootstrap, avia_load_shortcodes
+├── shortcodes/
+│   └── avia-ticker.php         # aviaShortcodeTemplate class (loaded by Enfold)
 ├── assets/
 │   ├── css/
 │   │   └── enfold-ticker.css  # Frontend ticker styles + animation
@@ -64,10 +64,11 @@ enfold-ticker/
 
 ## Key Technical Decisions
 
-- Register the ALB element by extending Enfold's `aviaShortcodeTemplate` class (standard Enfold ALB pattern)
+- Register the ALB element by adding the `shortcodes/` directory to Enfold’s `avia_load_shortcodes` filter and extending `aviaShortcodeTemplate` (Enfold’s discovery path is required; `avia_builder_init` alone is not sufficient)
 - Enqueue CSS only on pages where the shortcode is present (use `wp_enqueue_style` conditionally or via shortcode render method)
 - CSS animation preferred over JS marquee for performance and accessibility
-- Speed option maps to a CSS `animation-duration` value
+- Scroll duration (seconds) maps to a CSS `animation-duration` value
+- ALB tab for the element uses Enfold’s `__( 'Content Elements', 'avia_framework' )` so it groups with the default Content Elements, not a separate tab
 
 ## Conventions
 
