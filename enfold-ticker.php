@@ -2,7 +2,7 @@
 /**
  * Plugin Name: enfold-ticker
  * Description: Adds a Ticker element to the Enfold theme Advanced Layout Builder.
- * Version: 0.0.1
+ * Version: 0.1.0
  * Author: Twinpictures
  * License: GPL-2.0
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -18,7 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'ENFOLD_TICKER_VERSION', '0.0.1' );
+define( 'ENFOLD_TICKER_VERSION', '0.1.0' );
 define( 'ENFOLD_TICKER_PATH', plugin_dir_path( __FILE__ ) );
 define( 'ENFOLD_TICKER_URL', plugin_dir_url( __FILE__ ) );
 

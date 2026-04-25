@@ -11,7 +11,7 @@
 | Plugin Name | enfold-ticker |
 | Text Domain | `enfold-ticker` |
 | Author | Twinpictures |
-| Version | 0.0.1 |
+| Version | 0.1.0 |
 | License | GPL-2.0 |
 | Min WordPress | 6.0 |
 | Min PHP | 7.4 |

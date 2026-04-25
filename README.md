@@ -58,5 +58,8 @@ GPL-2.0 — see [https://www.gnu.org/licenses/gpl-2.0.html](https://www.gnu.org/
 
 ## Changelog
 
+### 0.1.0
+- Release metadata and readme alignment; ongoing ALB and ticker behaviour improvements.
+
 ### 0.0.1
 - Initial release
