@@ -64,6 +64,24 @@ function enfold_ticker_register_styles() {
 add_action( 'wp_enqueue_scripts', 'enfold_ticker_register_styles' );
 
 /**
+ * Admin / ALB: counter Enfold’s oversized SVG rule for the Ticker element icon.
+ */
+function enfold_ticker_register_admin_styles() {
+	$path = ENFOLD_TICKER_PATH . 'assets/css/enfold-ticker-admin.css';
+	$ver  = file_exists( $path ) ? (string) filemtime( $path ) : ENFOLD_TICKER_VERSION;
+
+	wp_register_style(
+		'enfold-ticker-admin',
+		ENFOLD_TICKER_URL . 'assets/css/enfold-ticker-admin.css',
+		array(),
+		$ver
+	);
+	wp_enqueue_style( 'enfold-ticker-admin' );
+}
+
+add_action( 'admin_enqueue_scripts', 'enfold_ticker_register_admin_styles' );
+
+/**
  * Load plugin translations.
  */
 function enfold_ticker_load_textdomain() {
