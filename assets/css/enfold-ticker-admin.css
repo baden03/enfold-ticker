@@ -1,0 +1,17 @@
+/**
+ * ALB / Avia builder: Enfold’s broad `img[src*=".svg"] { width: 1500px; }` blows up
+ * this plugin’s 35×35 icon. This rule wins for our URL only.
+ *
+ * @package enfold-ticker
+ */
+
+#avia_builder img[src*="/enfold-ticker/"][src$="ticker.svg"],
+.wp-admin .avia-modal img[src*="/enfold-ticker/"][src$="ticker.svg"] {
+	width: 35px !important;
+	max-width: 35px !important;
+	height: 35px !important;
+	max-height: 35px !important;
+	margin-top: 0 !important;
+	padding: 0;
+	vertical-align: top;
+}
