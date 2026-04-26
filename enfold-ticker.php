@@ -23,62 +23,16 @@ define( 'ENFOLD_TICKER_PATH', plugin_dir_path( __FILE__ ) );
 define( 'ENFOLD_TICKER_URL', plugin_dir_url( __FILE__ ) );
 
 /**
- * Full icon URL for the ALB insert button (same idea as core elements such as Chart + sc-chart.png).
+ * URL of the bundled ALB icon for the Ticker element.
  *
- * `sc-announcement.png` is not shipped with many Enfold trees, so it 404s. We use the first
- * existing file from a safe list (filenames differ by version, e.g. sc-text_block.png).
- *
- * Override: `add_filter( 'enfold_ticker_alb_icon_url', function( $url, $filename ) { return 'https://.../icon.png'; }, 10, 2 );`
+ * Override: `add_filter( 'enfold_ticker_alb_icon_url', function( $url ) { return 'https://.../icon.svg'; } );`
  *
  * @return string
  */
 function enfold_ticker_get_alb_icon_url() {
-	$candidates = array(
-		'sc-contentslider.png',
-		'sc-notification.png',
-		'sc-text_block.png',
-		'sc-textblock.png',
-		'sc-heading.png',
-		'sc-accordion.png',
-		'sc-slideshow.png',
-		'sc-chart.png',
-		'sc-timeline.png',
-		'sc-accordion-slider.png',
-		'sc-magazine.png',
-		'sc-hr.png',
-		'sc-callout.png',
-		'sc-announcement.png',
-	);
-	$rel       = 'config-templatebuilder/avia-template-builder/images';
-	$image_dir = trailingslashit( get_template_directory() ) . $rel;
+	$url = ENFOLD_TICKER_URL . 'assets/images/ticker.svg';
 
-	$base_url = '';
-	if ( class_exists( 'AviaBuilder' ) && ! empty( AviaBuilder::$path['imagesURL'] ) ) {
-		$base_url = AviaBuilder::$path['imagesURL'];
-	} elseif ( function_exists( 'get_template_directory_uri' ) ) {
-		$base_url = trailingslashit( get_template_directory_uri() ) . $rel . '/';
-	}
-
-	if ( $base_url === '' ) {
-		return '';
-	}
-
-	$filename = '';
-	if ( is_dir( $image_dir ) ) {
-		foreach ( $candidates as $file ) {
-			if ( is_readable( $image_dir . '/' . $file ) ) {
-				$filename = $file;
-				break;
-			}
-		}
-	}
-	if ( $filename === '' ) {
-		$filename = 'sc-textblock.png';
-	}
-
-	$url = $base_url . $filename;
-
-	return (string) apply_filters( 'enfold_ticker_alb_icon_url', $url, $filename, $image_dir );
+	return (string) apply_filters( 'enfold_ticker_alb_icon_url', $url );
 }
 
 /**
